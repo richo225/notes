@@ -11,7 +11,6 @@ function showNote(){
 
 showEvent = function(event){
 
-
-  console.log(event);
+  console.log(event.target[0].value);
 };
 controller.listenForFormSubmit();

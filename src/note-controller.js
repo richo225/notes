@@ -28,7 +28,7 @@
   NoteController.prototype.listenForFormSubmit = function(){
     document.addEventListener('submit', function(){
         event.preventDefault();
-        showEvent(event)
+        showEvent(event);
     })
   };
 
