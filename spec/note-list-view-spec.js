@@ -1,4 +1,5 @@
 describe("NoteListView", function(){
+
   it("shows only first 20 characters", function(){
     var list = new NoteList();
     var twenty = "I really love ruby and I miss it!";
@@ -8,8 +9,4 @@ describe("NoteListView", function(){
     isTrue(view.returnList() === result);
 
   });
-
-
-
-
 });

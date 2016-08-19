@@ -18,19 +18,15 @@
   };
 
   NoteController.prototype.showNote = function(){
+    console.log("show note is run");
     var note = this.getNote();
     var singleNote = new SingleNoteView(note);
     var app = document.getElementById("app");
     app.innerHTML = singleNote.returnHTML();
   };
 
-  NoteController.prototype.listenForFormSubmit = function(){
-    document.addEventListener('submit', function(){
-        event.preventDefault();
-        var text = event.target[0].value;
-        this.view.noteListModel.saveNote(text);
-    });
+  NoteController.prototype.formSubmit = function(submitText){
+    this.view.noteListModel.saveNote(submitText);
   };
-
 
 })(this);

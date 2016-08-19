@@ -1,4 +1,5 @@
 describe("NoteController", function(){
+  
   it("controller can be instantiated", function(){
     var list = new NoteList();
     var view = new NoteListView(list);
@@ -36,5 +37,13 @@ describe("NoteController", function(){
     controller.showNote();
     isTrue(appElement.innerHTML === "<div>zee</div>");
 
+  });
+
+  it("submit creates a note with text from form", function(){
+    var list = new NoteList();
+    var view = new NoteListView(list);
+    var controller = new NoteController(view);
+    controller.formSubmit("This is my first note");
+    isTrue(list.notes[0].getText() === "This is my first note");
   });
 });

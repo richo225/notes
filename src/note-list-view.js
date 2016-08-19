@@ -1,5 +1,3 @@
-// var NoteList = require("../src/note-list-model").NoteList;
-
 (function(exports){
   function NoteListView(noteList) {
     this.noteListModel = noteList;

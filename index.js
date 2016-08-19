@@ -10,4 +10,9 @@ function showNote(){
   controller.showNote();
 }
 
-controller.listenForFormSubmit();
+window.addEventListener('submit', formSubmit);
+
+function formSubmit(){
+  event.preventDefault();
+  controller.formSubmit(event.target[0].value);
+}
