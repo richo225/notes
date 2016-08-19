@@ -2,6 +2,7 @@
 
   function NoteList() {
     this.notes = [];
+
   }
 
     NoteList.prototype.saveNote = function(text) {

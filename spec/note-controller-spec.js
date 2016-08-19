@@ -26,7 +26,6 @@ describe("NoteController", function(){
     list.saveNote("zee");
     var view = new NoteListView(list);
     var controller = new NoteController(view);
-    console.log('controller.showNote: ', controller.showNote)
 
     var appElement = {id: "app"};
     document.getElementById = function(){
@@ -34,9 +33,8 @@ describe("NoteController", function(){
     };
 
     document.onload = function(){window.location.hash = "#0"};
-    controller.showNote()
-    console.log(appElement);
-    isTrue(appElement.innerHTML === "<div>zee</div>")
+    controller.showNote();
+    isTrue(appElement.innerHTML === "<div>zee</div>");
 
   });
 });

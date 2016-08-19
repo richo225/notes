@@ -18,7 +18,6 @@
   };
 
   NoteController.prototype.showNote = function(){
-    console.log(this);
     var note = this.getNote();
     var singleNote = new SingleNoteView(note);
     var app = document.getElementById("app");
@@ -28,8 +27,9 @@
   NoteController.prototype.listenForFormSubmit = function(){
     document.addEventListener('submit', function(){
         event.preventDefault();
-        showEvent(event);
-    })
+        var text = event.target[0].value;
+        this.view.noteListModel.saveNote(text);
+    });
   };
 
 
