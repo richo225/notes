@@ -22,23 +22,6 @@ describe("NoteController", function(){
     document.getElementById = document.__proto__.getElementById;
   });
 
-  // it("loads page corresponding to hash", function(){
-  //   var list = new NoteList();
-  //   list.saveNote("zee");
-  //   var view = new NoteListView(list);
-  //   var controller = new NoteController(view);
-  //
-  //   var appElement = {id: "app"};
-  //   document.getElementById = function(){
-  //     return appElement;
-  //   };
-  //
-  //   document.onload = function(){window.location.hash = "#0"};
-  //   controller.showNote();
-  //   isTrue(appElement.innerHTML === "<div>zee</div>");
-  //
-  // });
-
   it("submit creates a note with text from form", function(){
     var list = new NoteList();
     var view = new NoteListView(list);

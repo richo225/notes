@@ -3,9 +3,9 @@
     this.view = view;
   }
 
-  NoteController.prototype.insert = function(){
-    var app = document.getElementById("app");
-    app.innerHTML = this.view.returnList();
+  NoteController.prototype.insertList = function(){
+    var list = document.getElementById("list");
+    list.innerHTML = this.view.returnList();
   };
 
 
@@ -18,16 +18,14 @@
   };
 
   NoteController.prototype.showNote = function(){
-    console.log("show note is run");
-    var note = this.getNote();
-    var singleNote = new SingleNoteView(note);
-    var app = document.getElementById("app");
-    app.innerHTML = singleNote.returnHTML();
+    var singleNote = new SingleNoteView(this.getNote());
+    var note = document.getElementById("note");
+    note.innerHTML = singleNote.returnHTML();
   };
 
   NoteController.prototype.formSubmit = function(submitText){
     this.view.noteListModel.saveNote(submitText);
-    this.insert();
+    this.insertList();
   };
 
   exports.NoteController = NoteController;

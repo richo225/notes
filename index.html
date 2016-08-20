@@ -2,14 +2,19 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title> Notes </title>
   </head>
   <body>
-    <div id="app"> hello </div>
+
     <form action="/notes/new" method="post">
       <textarea id='text' ></textarea>
-      <input type="submit" value="Submit" />
+      <input type="submit" value="Create" />
     </form>
+
+    <div id="list"></div>
+
+    <div id="note"> </div>
+
     <script src="src/note-model.js"></script>
     <script src="src/note-list-model.js"></script>
     <script src="src/note-list-view.js"></script>
