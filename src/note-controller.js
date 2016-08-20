@@ -7,7 +7,7 @@
     var app = document.getElementById("app");
     app.innerHTML = this.view.returnList();
   };
-  exports.NoteController = NoteController;
+
 
   NoteController.prototype.getNote = function() {
     return this.view.noteListModel.notes[this.getIdByHash()];
@@ -27,6 +27,9 @@
 
   NoteController.prototype.formSubmit = function(submitText){
     this.view.noteListModel.saveNote(submitText);
+    this.insert();
   };
+
+  exports.NoteController = NoteController;
 
 })(this);
