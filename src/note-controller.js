@@ -1,4 +1,5 @@
 (function(exports){
+
   function NoteController(view){
     this.view = view;
   }
@@ -7,7 +8,6 @@
     var list = document.getElementById("list");
     list.innerHTML = this.view.returnList();
   };
-
 
   NoteController.prototype.getNote = function() {
     return this.view.noteListModel.notes[this.getIdByHash()];

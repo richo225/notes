@@ -1,4 +1,5 @@
 (function(exports){
+
   function NoteListView(noteList) {
     this.noteListModel = noteList;
   }
@@ -14,6 +15,5 @@
   };
 
   exports.NoteListView = NoteListView;
-
 
 })(this);
