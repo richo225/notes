@@ -16,7 +16,7 @@
   NoteController.prototype.getIdByHash = function(){
     return window.location.hash.split("#")[1];
   };
-
+  
   NoteController.prototype.showNote = function(){
     var singleNote = new SingleNoteView(this.getNote());
     var note = document.getElementById("note");

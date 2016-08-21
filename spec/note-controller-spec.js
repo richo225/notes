@@ -6,32 +6,6 @@ function setupModel(){
   controller = new NoteController(view);
 }
 
-function mockElement(element){
-  appElement = {id: element};
-  document.getElementById = function(){
-    return appElement;
-  };
-}
-
-function mockHash(hash){
-  controller.getIdByHash = function(){
-    return hash;
-  };
-}
-
-function stubForm(){
-  NoteController.prototype.formSubmit = function(submitText){
-    this.view.noteListModel.saveNote(submitText);
-  };
-}
-
-function unstubForm(){
-  NoteController.prototype.formSubmit = function(submitText){
-    this.view.noteListModel.saveNote(submitText);
-    this.insertList();
-  };
-}
-
 describe("NoteController", function(){
 
   it("controller can be instantiated", function(){
