@@ -1,0 +1,27 @@
+{
+  "name": "notes-app",
+  "version": "1.0.0",
+  "description": "Built with pure Javascript.  No front end or testing frameworks used.",
+  "main": "server.js",
+  "dependencies": {
+    "http-server": "^0.9.0",
+    "start": "^4.0.1"
+  },
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richo225/notes-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/richo225/notes-app/issues"
+  },
+  "homepage": "https://github.com/richo225/notes-app#readme"
+}
